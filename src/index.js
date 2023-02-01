@@ -2,19 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './index.css';
 
-const Square = () => {
+const Square = (props) => {
   return (
-    <div style={{
-      backgroundColor: 'blue',
-      margin: 10,
-      padding: 20
-    }}>
-      Square
+    <div className="square">
+      {props.value}
     </div>
   );
 };
 
 const Board = () => {
+  const renderSquare = (i) => {
+    return (
+      <Square value={i}/>
+    )
+  }
   return (
     <div style={{
       backgroundColor: 'orange',
@@ -22,19 +23,23 @@ const Board = () => {
       padding: 20
     }}>
       Board
-      <Square/>
+      <div className="board-row">
+        {renderSquare(1)} {renderSquare(2)} {renderSquare(3)}
+      </div>
+      <div className="board-row">
+      {renderSquare(4)} {renderSquare(5)} {renderSquare(6)}
+      </div>
+      <div className="board-row">
+      {renderSquare(7)} {renderSquare(8)} {renderSquare(9)}
+      </div>
     </div>
   );
 };
 
 const Game = () => {
   return (
-    <div style={{
-      backgroundColor: 'skyblue',
-      margin: 10,
-      padding: 20
-    }}>
-      Game
+    <div className="game">
+      Tic-Tac-Toe
       <Board/>
     </div>
   );
