@@ -24,11 +24,17 @@ body {
   /* padding: 0; */
   font-size: 90px;
   text-align: center;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .square:focus {
   outline: none;
   background-color: blanchedalmond;
+}
+
+.turn {
+  background-color: rgb(221, 129, 18);
+  margin: 10px;
+  padding: 20px;
 }

@@ -13,11 +13,17 @@ const Square = (props) => {
 const Board = () => {
   const initialSquares = Array(9).fill(null);
   const [squares, setSquares] = useState(initialSquares);
+  const [turn, setTurn] = useState('Player1');
 
   const handleClickEvent = (i) => {
     const updatedSquares = [...squares];
-    updatedSquares[i] = 'X';
+
+    updatedSquares[i] = turn === 'Player1' ? 'X' : 'O';
+    
     setSquares(updatedSquares);
+
+    const nextTurn = turn === 'Player1' ? 'Player2' : 'Player1';
+    setTurn(nextTurn);
   }
 
   const renderSquare = (i) => {
@@ -26,12 +32,8 @@ const Board = () => {
     )
   }
   return (
-    <div style={{
-      backgroundColor: 'orange',
-      margin: 10,
-      padding: 20
-    }}>
-      Board
+    <div className="turn">
+      Turn: {turn}
       <div className="board-row">
         {renderSquare(1)} {renderSquare(2)} {renderSquare(3)}
       </div>
