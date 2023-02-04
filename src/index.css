@@ -28,13 +28,21 @@ body {
   height: 150px;
 }
 
-.square:focus {
+/* .square:focus {
   outline: none;
   background-color: blanchedalmond;
-}
+} */
 
-.turn {
+.board {
   background-color: rgb(221, 129, 18);
   margin: 10px;
   padding: 20px;
+}
+
+.status {
+  text-align: center;
+}
+
+#winDisplay {
+  text-align: center;
 }
