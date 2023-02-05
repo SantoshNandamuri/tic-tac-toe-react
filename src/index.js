@@ -43,11 +43,11 @@ const Board = () => {
 
   const playerWin = checkWin(squares);
   const displayWinner = playerWin != null ? (playerWin === 'X'? 'Player1 Wins!' : 'Player2 Wins!') : null;
-  const gameStatus = playerWin == null ? `Turn: ${turn}` : 'Game Over!'
+  const gameStatus = playerWin == null ? `Turn: ${turn}` : 'Game Over!';
   
   return (
     <div className="board">
-      <div className="status">{gameStatus}</div>
+      <div className={gameStatus === 'Game Over!'? "statusOver" : "status"}>{gameStatus}</div>
       <div className="board-row">
         {renderSquare(1)} {renderSquare(2)} {renderSquare(3)}
       </div>
