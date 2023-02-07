@@ -1,5 +1,3 @@
-# Getting Started with Create React App
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -28,4 +26,10 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Screenshots:
+
+<img width="581" alt="image" src="https://user-images.githubusercontent.com/109261139/217141752-1474137f-2ab6-4031-b6aa-eef4d4fcb442.png">
+
+<img width="581" alt="image" src="https://user-images.githubusercontent.com/109261139/217142014-4fff3710-6aaa-472e-9db2-aa176dcb864f.png">
 
